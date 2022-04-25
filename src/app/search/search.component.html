@@ -1,0 +1,10 @@
+<div>
+  <!-- #s is a template refence to have access everywhere in html file -->
+  <!-- (keyup.enter)="s.value" its means by pressing enter search the value inside the inputfield with the refence s -->
+
+  <input #s type="text" placeholder="Search Food"
+  (keyup.enter)="search(s.value)"
+  [value]="searchTerm">
+  <button (click)="search(s.value)">Search</button>
+
+</div>

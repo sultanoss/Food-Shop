@@ -1,0 +1,49 @@
+ul {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  list-style-type: none;
+
+}
+
+li a {
+
+  height: 22.5rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid whitesmoke;
+  border-radius: 1rem;
+  color: #e72929;
+
+  & :hover{
+
+    opacity: 0.9;
+    cursor: pointer;
+  }
+
+  img{
+    object-fit: cover;
+    height: 200px;
+    width: 300px;
+    border-radius: 16px;
+  }
+}
+
+#heart{
+
+  height: 32px;
+  width: 32px;
+}
+
+.favorit{
+
+  opacity: 1;
+}
+
+.not{
+  opacity: 0.5;
+}
