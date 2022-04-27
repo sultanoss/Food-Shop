@@ -3,7 +3,7 @@ export class Food {
   // ? means optional
   // ! means required
 
-  id!: string;
+  id!: number;
   name!: String;
   price!: number;
   tag?: String[];

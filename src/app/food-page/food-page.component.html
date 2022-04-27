@@ -1,0 +1,40 @@
+<div class="container">
+  <img [src]="food.imageUrl">
+  <div class="food-details">
+    <div class="header">
+      <span>{{ food.name }}</span>
+      <span class="favorit {{ food.favorite?'':'not' }} "><img id="heart" src="assets/img/hearts-32.png"></span>
+    </div>
+    <div class="stars">
+      <span>Rating</span>
+      <star-rating [value]="food.stars" [totalstars]="5" checkedcolor="red" uncheckedcolor="black" size="25px"
+        [readonly]="true">
+      </star-rating>
+    </div>
+    <div class="origins">
+      <span>Origin</span>
+      <div>
+        <span *ngFor="let origin of food.origins">
+          {{ origin }}
+        </span>
+      </div>
+    </div>
+    <div class="cook-time">
+      <span>Cooking Time</span>
+      <span>{{ food.cookTime }} Minutes</span>
+    </div>
+    <div class="price">
+      <span>Price</span>
+      <span>{{ food.price | currency }}</span>
+    </div>
+    <div class="btn">
+      <button (click)=" addToCart()" class="add-card-btn">Add to Card</button>
+    </div>
+    <div class="tags">
+      <span>For More </span>
+      <app-tags [foodPageTags]="food.tag"></app-tags>
+    </div>
+  </div>
+
+</div>
+

@@ -1,0 +1,41 @@
+<div class="container">
+  <ul>
+    <li *ngFor="let cartItem of cart.items ">
+      <div>
+        <img [src]="cartItem.food.imageUrl">
+      </div>
+      <div class="food-name">
+        <a routerLink="/food/{{ cartItem.food.id }}">{{ cartItem.food.name }}</a>
+      </div>
+      <div>
+        <!-- #quantitySelect for getting value of input  -->
+        <select #quantitySelect (change)="changeQuantity(cartItem,quantitySelect.value)">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <div>
+        {{ cartItem.price | currency }}
+      </div>
+      <div>
+        <button class="remove-btn" (click)="removeFromCart(cartItem)">Remove</button>
+      </div>
+    </li>
+  </ul>
+
+  <div class="checkout">
+    <div class="basket-info">
+      <div class="foods-count">
+        <span>Count:</span>
+        <span>{{ cart.items.length }}</span>
+      </div>
+      <div class="total-price">
+        <span>Total Price:</span>
+        <span>{{ cart.totalPrice | currency }}</span>
+      </div>
+    </div>
+  </div>
+</div>

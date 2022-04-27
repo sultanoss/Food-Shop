@@ -1,5 +1,7 @@
 <app-search></app-search>
 
+<app-tags></app-tags>
+
 <ul>
   <li *ngFor="let food of foods">
 
@@ -11,8 +13,10 @@
       <div class="content">
         <div class="name">
           {{ food.name }}
+
           <!-- {{ food.favorite?'':'not' }} we aks if it is favorite so take value from data else do nothing -->
         </div>
+
         <span class="favorit {{ food.favorite?'':'not' }} "><img id="heart" src="assets/img/hearts-32.png"></span>
         <div class="stars">
 
