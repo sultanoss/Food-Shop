@@ -1,7 +1,10 @@
 <header>
   <div class="container">
-    <a routerLink="/" class="logo">Food Shop</a>
 
+    <div class="logo">
+      <img src="assets/img/leb.png">
+      <a routerLink="/"> Lebanese Food Shop</a>
+    </div>
 
     <nav>
       <ul>
@@ -17,7 +20,7 @@
           </div>
         </li>
         <li>
-          <a routerLink="/cart-page">Cart <span>3</span></a>
+          <a routerLink="/cart-page">Cart <span>{{ cart.items.length }}</span></a>
         </li>
       </ul>
     </nav>

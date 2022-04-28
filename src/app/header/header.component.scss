@@ -8,12 +8,14 @@ header {
 a {
   color: #af1313;
   text-decoration: none;
+  padding: .5rem;
 
   &:hover {
 
     background-color: #e72929;
     color: white;
     cursor: pointer;
+    border-radius: 1rem;
   }
 
   span {
@@ -34,8 +36,18 @@ a {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   font-weight: 1rem;
   font-weight: bold;
+
+  img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin:10px 10px 10px 16px;
+  }
 }
 
 ul {
