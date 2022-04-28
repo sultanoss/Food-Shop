@@ -2,6 +2,11 @@
 
 <app-tags></app-tags>
 
+<!-- show this message if by searching not found food -->
+<app-not-found [visible]="!foods || foods.length <= 0"
+resetLinkText="Reset Search">
+</app-not-found>
+
 <ul>
   <li *ngFor="let food of foods">
 

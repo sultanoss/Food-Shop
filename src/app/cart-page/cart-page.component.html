@@ -1,4 +1,12 @@
-<div class="container">
+<!-- *ngIf="cart && cart.items.length > 0 means  show this div when cart exist and includes at minimum 1 item -->
+
+
+<app-not-found [visible]="!cart || cart.items.length <= 0 "
+notFoundMessage="Cart Page  is empty"
+resetLinkText="Go To Homepage">
+</app-not-found> <!-- if not show the not Found Message -->
+
+<div *ngIf="cart && cart.items.length > 0" class="container">
   <ul>
     <li *ngFor="let cartItem of cart.items ">
       <div>

@@ -1,4 +1,11 @@
-<div class="container">
+
+<!-- in case product is removed from data an user still has it in his cach memory -->
+<app-not-found [visible]="!food"
+ notFoundMessage="Product not found"
+ resetLinkText="Back to the HomePage">
+</app-not-found>
+
+<div class="container" *ngIf="food">
   <img [src]="food.imageUrl">
   <div class="food-details">
     <div class="header">
@@ -37,4 +44,3 @@
   </div>
 
 </div>
-
